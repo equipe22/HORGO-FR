@@ -1,0 +1,540 @@
+Prefix(:=<http://urms1138.eq22/ontologies/horg-fr#>)
+Prefix(org:=<http://www.w3.org/ns/org#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://urms1138.eq22/ontologies/horg-fr#>
+<http://urms1138.eq22/ontologies/horg-fr#>
+Import(<http://www.w3.org/ns/org#>)
+Annotation(<http://purl.org/dc/terms/contributor> "Christina Khnaisser")
+Annotation(<http://purl.org/dc/terms/contributor> "Vincent Looten")
+Annotation(rdfs:comment "Hospital organization ontology in France"@en)
+Annotation(rdfs:comment "Ontologie d'organisation hospitalière en France"@fr)
+Annotation(owl:versionInfo "Inspiré du PMSI (programme de médicalisation des systèmes d’information).
+Le PMSI est apparu à l'initiative du directeur des Hôpitaux de l'époque, Jean de Kervasdoué, en 1982, qui s'est inspiré du système de maîtrise de dépenses de santé élaboré aux États-Unis par le professeur Fetter. La circulaire DH/DSS n° 95-23, du 10 mai 1995, précise les objectifs et les conditions de mise en œuvre du PMSI.
+En offrant une description précise de l'activité médicale de chaque établissement de santé, le PMSI doit permettre de mesurer les coûts des différentes pathologies en groupant les malades par famille de pathologies (GHM). Le GHM est permis par un classement des malades au moyen des résumés standards de sortie (RSS).
+En donnant la possibilité de comparer l'activité et les coûts respectifs des établissements, le PMSI permet de réduire les inégalités de dotation budgétaire ainsi mises en évidence, car sur la base des séjours classés par GHM, il est calculé un indice synthétique d'activité (ISA*) qui, valorisé, permet de calculer les dotations budgétaires des établissements de santé.
+[https://www.bnds.fr/dictionnaire/pmsi.html]"@fr)
+Annotation(owl:versionInfo "TODO 2019-03-18 CK : définir les contraintes inverse (2qt)")
+
+Declaration(Class(:HORG-FR_000003))
+Declaration(Class(:HORG-FR_000004))
+Declaration(Class(:HORG-FR_000005))
+Declaration(Class(:HORG-FR_000006))
+Declaration(Class(:HORG-FR_000009))
+Declaration(Class(:HORG-FR_000011))
+Declaration(Class(:HORG-FR_000012))
+Declaration(Class(:HORG-FR_000016))
+Declaration(Class(:HORG-FR_000017))
+Declaration(Class(:HORG-FR_000018))
+Declaration(Class(:HORG-FR_000019))
+Declaration(Class(:HORG-FR_000020))
+Declaration(Class(:HORG-FR_000025))
+Declaration(Class(:HORG-FR_000026))
+Declaration(Class(:HORG-FR_000027))
+Declaration(Class(:HORG-FR_000030))
+Declaration(Class(:HORG-FR_000032))
+Declaration(Class(:HORG-FR_000033))
+Declaration(Class(:HORG-FR_000034))
+Declaration(Class(:HORG-FR_000035))
+Declaration(Class(:HORG-FR_000036))
+Declaration(Class(:HORG-FR_000037))
+Declaration(Class(:HORG-FR_000038))
+Declaration(Class(:HORG-FR_000039))
+Declaration(Class(:HORG-FR_000043))
+Declaration(Class(:HORG-FR_000044))
+Declaration(Class(:HORG-FR_000045))
+Declaration(Class(:HORG-FR_000046))
+Declaration(Class(:HORG-FR_000047))
+Declaration(Class(:HORG-FR_000048))
+Declaration(ObjectProperty(:HORG-FR_000028))
+Declaration(ObjectProperty(:HORG-FR_000029))
+Declaration(ObjectProperty(:HORG-FR_000042))
+Declaration(DataProperty(:HORG-FR_000000))
+Declaration(DataProperty(:HORG-FR_000001))
+Declaration(DataProperty(:HORG-FR_000002))
+Declaration(NamedIndividual(:Dr.Dupont))
+Declaration(NamedIndividual(:Dr.Legrand))
+Declaration(NamedIndividual(:ua_ophtalmologie))
+Declaration(NamedIndividual(:uh_ophtalmologie))
+Declaration(NamedIndividual(:uma_ophtalmologie))
+Declaration(AnnotationProperty(<http://purl.org/dc/terms/contributor>))
+Declaration(AnnotationProperty(:HORG-FR_000010))
+Declaration(Datatype(:ACTIVITYTYPECODE))
+Declaration(Datatype(:AGENTID))
+Declaration(Datatype(:AGENTLABEL))
+Declaration(Datatype(:DISCIPLINECODE))
+Declaration(Datatype(:MEDICALSPECODE))
+Declaration(Datatype(:PMSI))
+Declaration(Datatype(:UNITTYPECODE))
+############################
+#   Annotation Properties
+############################
+
+# Annotation Property: :HORG-FR_000010 (acronyme)
+
+AnnotationAssertion(rdfs:label :HORG-FR_000010 "acronyme"@fr)
+
+
+############################
+#   Object Properties
+############################
+
+# Object Property: :HORG-FR_000028 (a une valeur spécifiée)
+
+AnnotationAssertion(rdfs:label :HORG-FR_000028 "a une valeur spécifiée"@fr)
+AnnotationAssertion(rdfs:label :HORG-FR_000028 "has specified value"@en)
+
+# Object Property: :HORG-FR_000029 (est de type)
+
+AnnotationAssertion(rdfs:label :HORG-FR_000029 "est de type"@fr)
+AnnotationAssertion(rdfs:label :HORG-FR_000029 "is of type"@en)
+
+# Object Property: :HORG-FR_000042 (identifié par)
+
+AnnotationAssertion(rdfs:label :HORG-FR_000042 "identified by"@en)
+AnnotationAssertion(rdfs:label :HORG-FR_000042 "identifié par"@fr)
+SubObjectPropertyOf(:HORG-FR_000042 owl:topObjectProperty)
+FunctionalObjectProperty(:HORG-FR_000042)
+
+
+############################
+#   Data Properties
+############################
+
+# Data Property: :HORG-FR_000000 (a code)
+
+AnnotationAssertion(rdfs:label :HORG-FR_000000 "a code"@fr)
+AnnotationAssertion(rdfs:label :HORG-FR_000000 "has code"@en)
+SubDataPropertyOf(:HORG-FR_000000 owl:topDataProperty)
+FunctionalDataProperty(:HORG-FR_000000)
+
+# Data Property: :HORG-FR_000001 (has label)
+
+AnnotationAssertion(rdfs:label :HORG-FR_000001 "a etiquette"@fr)
+AnnotationAssertion(rdfs:label :HORG-FR_000001 "has label"@en)
+
+# Data Property: :HORG-FR_000002 (est valide durant)
+
+AnnotationAssertion(rdfs:label :HORG-FR_000002 "est valide durant"@fr)
+AnnotationAssertion(rdfs:label :HORG-FR_000002 "is valid during"@en)
+
+# Data Property: org:identifier (tiene identificador)
+
+FunctionalDataProperty(org:identifier)
+
+
+############################
+#   Datatypes
+############################
+
+# Datatype: :ACTIVITYTYPECODE (Activity type code)
+
+AnnotationAssertion(rdfs:label :ACTIVITYTYPECODE "Activity type code"@en)
+AnnotationAssertion(rdfs:label :ACTIVITYTYPECODE "Code type d'activité"@fr)
+
+# Datatype: :AGENTID (Identifiant d'un agent)
+
+AnnotationAssertion(rdfs:comment :AGENTID "Agent identifier"@fr)
+AnnotationAssertion(rdfs:comment :AGENTID "Identifiant d'un agent"@fr)
+AnnotationAssertion(rdfs:label :AGENTID "Agent identifier"@en)
+AnnotationAssertion(rdfs:label :AGENTID "Identifiant d'un agent"@fr)
+
+# Datatype: :AGENTLABEL (Libellé d'un agent)
+
+AnnotationAssertion(rdfs:label :AGENTLABEL "Agent label"@en)
+AnnotationAssertion(rdfs:label :AGENTLABEL "Libellé d'un agent"@fr)
+
+# Datatype: :DISCIPLINECODE (Medical discipline code)
+
+AnnotationAssertion(rdfs:label :DISCIPLINECODE "Code de discipline médicale"@fr)
+AnnotationAssertion(rdfs:label :DISCIPLINECODE "Medical discipline code"@en)
+
+# Datatype: :MEDICALSPECODE (Medical speciality code)
+
+AnnotationAssertion(rdfs:label :MEDICALSPECODE "Code de spécialité médicale"@fr)
+AnnotationAssertion(rdfs:label :MEDICALSPECODE "Medical speciality code"@en)
+
+# Datatype: :PMSI (PMSI field)
+
+AnnotationAssertion(rdfs:comment :PMSI "Champs possibles : MCO::Mécedine, chirurgie et obstétrique ou PSY::Phsychiatrie ou SSR::Soins de suite et de réadaptation ou HAD::Hospitalisation à domicile."@fr)
+AnnotationAssertion(rdfs:label :PMSI "Champ PMSI"@fr)
+AnnotationAssertion(rdfs:label :PMSI "PMSI field"@en)
+
+# Datatype: :UNITTYPECODE (Code type d'unité)
+
+AnnotationAssertion(rdfs:label :UNITTYPECODE "Code type d'unité"@fr)
+AnnotationAssertion(rdfs:label :UNITTYPECODE "Unit type code"@en)
+
+
+############################
+#   Classes
+############################
+
+# Class: :HORG-FR_000003 (Type de l'unité)
+
+AnnotationAssertion(rdfs:label :HORG-FR_000003 "Type de l'unité"@fr)
+AnnotationAssertion(rdfs:label :HORG-FR_000003 "Unit type"@en)
+SubClassOf(:HORG-FR_000003 <http://www.w3.org/2004/02/skos/core#Concept>)
+SubClassOf(:HORG-FR_000003 DataSomeValuesFrom(:HORG-FR_000001 xsd:string))
+SubClassOf(:HORG-FR_000003 DataExactCardinality(1 :HORG-FR_000000 :UNITTYPECODE))
+
+# Class: :HORG-FR_000004 (Hospital)
+
+AnnotationAssertion(:HORG-FR_000010 :HORG-FR_000004 "HO"@en)
+AnnotationAssertion(:HORG-FR_000010 :HORG-FR_000004 "HO"@fr)
+AnnotationAssertion(rdfs:comment :HORG-FR_000004 "Institution with an organized medical and administrative staff which provide medical care to patients."@en)
+AnnotationAssertion(rdfs:isDefinedBy :HORG-FR_000004 "https://meshb-prev.nlm.nih.gov/record/ui?ui=D006761")
+AnnotationAssertion(rdfs:label :HORG-FR_000004 "Hopital"@fr)
+AnnotationAssertion(rdfs:label :HORG-FR_000004 "Hospital"@en)
+SubClassOf(:HORG-FR_000004 org:FormalOrganization)
+SubClassOf(:HORG-FR_000004 ObjectSomeValuesFrom(org:hasUnit :HORG-FR_000005))
+SubClassOf(:HORG-FR_000004 ObjectSomeValuesFrom(org:hasUnit :HORG-FR_000006))
+SubClassOf(:HORG-FR_000004 ObjectExactCardinality(1 :HORG-FR_000042 :HORG-FR_000026))
+
+# Class: :HORG-FR_000005 (Pôle de santé)
+
+AnnotationAssertion(:HORG-FR_000010 :HORG-FR_000005 "HDIV"@en)
+AnnotationAssertion(:HORG-FR_000010 :HORG-FR_000005 "POLE"@fr)
+AnnotationAssertion(rdfs:comment :HORG-FR_000005 "A healthcare division brings together health professionals and, where appropriate, health professionals with health or medico-social structures. A healthcare division services with common or complementary activities."@en)
+AnnotationAssertion(rdfs:comment :HORG-FR_000005 "Definition : Les pôles d’activité clinique et médico-technique peuvent comporter des \"structures internes\" de prise en charge du malade par les équipes médicales, soignantes ou médico-techniques\". Les pôles peuvent être multi-sites.
+Source 1: Modèle des Objets de Santé, ASIP Santé
+Lien de la source 1 : http://mos.asipsante.fr/
+Source 2 :  LOI n° 2009-879 du 21 juillet 2009 portant réforme de l'hôpital et relative aux patients, à la santé et aux territoires (NOR: SASX0822640L)
+Lien de la source 2 :
+https://www.legifrance.gouv.fr/affichTexteArticle.do;jsessionid=5A6DC6640B05BE24F7BFB44CE2326DCC.tplgfr27s_1?idArticle=JORFARTI000020880115&cidTexte=JORFTEXT000020879475&dateTexte=29990101&categorieLien=id"@fr)
+AnnotationAssertion(rdfs:comment :HORG-FR_000005 "« Le pôle de santé réunit des professionnels de santé et, le cas échéant, des professionnels de santé avec des structures sanitaires ou médico-sociales. Il peut disposer de la personnalité morale. Il peut comporter plusieurs sites d’implantation. [...] La suppression de la division territoriale de l'hôpital en services ou départements au profit de pôles gestionnaires rassemblant les activités fonctionnelles qui devraient se regrouper pour former des petits nombres de pôles selon les auteurs du rapport sur la modernisation des statuts de l'hôpital public et de sa gestion sociale (cf. rapport Debrosse-Perrin-Valencien, avril 2003). Selon le rapport présentant l'ordonnance du 2 mai 2005, l'organisation en pôles obéit à une logique de simplification et de décentralisation de la gestion. Afin d'obtenir des structures de taille suffisante, les pôles regroupent des services ayant des activités communes ou complémentaires. Au lieu que le directeur ait à coordonner des services nombreux, cloisonnés et peu aptes à assurer les prérogatives de gestion de l'établissement, il contractualisera avec des pôles en moindre nombre qui géreront librement dans ce cadre leurs moyens.»"@fr)
+AnnotationAssertion(rdfs:label :HORG-FR_000005 "Healthcare division"@en)
+AnnotationAssertion(rdfs:label :HORG-FR_000005 "Pôle de santé"@fr)
+AnnotationAssertion(rdfs:seeAlso :HORG-FR_000005 "https://www.bnds.fr/dictionnaire/pa.html"@fr)
+SubClassOf(:HORG-FR_000005 org:OrganizationalUnit)
+SubClassOf(:HORG-FR_000005 ObjectSomeValuesFrom(:HORG-FR_000028 :HORG-FR_000019))
+SubClassOf(:HORG-FR_000005 ObjectSomeValuesFrom(org:hasUnit :HORG-FR_000009))
+SubClassOf(:HORG-FR_000005 ObjectSomeValuesFrom(org:hasUnit :HORG-FR_000016))
+SubClassOf(:HORG-FR_000005 ObjectExactCardinality(1 org:unitOf :HORG-FR_000004))
+
+# Class: :HORG-FR_000006 (Service and department)
+
+AnnotationAssertion(:HORG-FR_000010 :HORG-FR_000006 "SD"@en)
+AnnotationAssertion(:HORG-FR_000010 :HORG-FR_000006 "SD"@fr)
+AnnotationAssertion(rdfs:comment :HORG-FR_000006 "Les services hospitaliers sont un regroupement d'unités fonctionnelles d'une même discipline médicale. Ce sont des structures agrégées constituant l'organisation d'un hôpital en France. Un service peut être constitué d'une seule unité fonctionnelle si cette dernière ne présente aucune complémentarité directe avec d'autres unités de même discipline médicale ou s'il n'existe pas d'unité fonctionnelle ayant la même activité."@fr)
+AnnotationAssertion(rdfs:isDefinedBy :HORG-FR_000006 "https://fr.wikipedia.org/wiki/Service_hospitalier"@fr)
+AnnotationAssertion(rdfs:label :HORG-FR_000006 "Service and department"@en)
+AnnotationAssertion(rdfs:label :HORG-FR_000006 "Service et département"@fr)
+SubClassOf(:HORG-FR_000006 org:OrganizationalUnit)
+SubClassOf(:HORG-FR_000006 ObjectExactCardinality(1 org:linkedTo :HORG-FR_000005))
+SubClassOf(:HORG-FR_000006 ObjectExactCardinality(1 org:unitOf :HORG-FR_000004))
+
+# Class: :HORG-FR_000009 (Management unit)
+
+AnnotationAssertion(:HORG-FR_000010 :HORG-FR_000009 "MGU"@en)
+AnnotationAssertion(:HORG-FR_000010 :HORG-FR_000009 "UG"@fr)
+AnnotationAssertion(rdfs:comment :HORG-FR_000009 "A management unit (MGU) is a unit grouping medico-administrative units and administrative units. A MGU can only be attached to one functional unit. The link between a MGU and a functional unit is via the department / department or a healthcare division."@en)
+AnnotationAssertion(rdfs:comment :HORG-FR_000009 "Une unité de gestion (UG) ou section d'analyse (SA) est une unité regroupant une unité médico-administratives (UMA) et des unité administratives. Une UG ne peut être rattachée qu’à une seule unité fonctionnelle. Le lien entre une UG et une unité fonctionelle se fait via le service/département ou à défaut le pôle.
+
+La SA « section d’analyse » correspond à un compartiment d’affectation de charges analytiques qui suppose une homogénéité de l’activité. Elle permet le rapprochement entre des ressources clairement identifiées et une activité précisément mesurée par une unité physique, nommée unité d’œuvre (UO). 
+
+Le découpage en SA doit être cohérent avec le découpage en UF pour rapprocher sans ambiguïté activités, moyens et recettes. Ainsi une UF ne peut appartenir qu’à une SA et une SA doit donc pouvoir être superposée avec une UF ou un regroupement d’UF du même pôle.
+
+Une SA est une unité de recueild’information analytique qui permet d’isoler sans ambiguïté niomission à la fois une activité médicalisée quantifi able (enRUM,  ICR,  consultations,  etc.)  et  une  consommation  deressources (en quantité ou en euros). L’établissement seradécoupé selon quatre types de sections homogènes : les SAC ou sections  d’analyse  clinique  (lieu  d’hospitalisation  ou  deconsultation),  les  SAMT  ou  sections  d’analyse  médico-technique,  les  SALM  ou  sections  d’analyse  de  logistiquemédicale et enfin les SALGG ou sections d’analyse delogistique et gestion générale.
+
+Source : Guide méthodologique de comptabilité analytique hospitalière. Ministère de la Santé. 2011.
+Lien : 
+https://solidarites-sante.gouv.fr/IMG/pdf/GUIDE_CAH___BOS_2011-3.pdf"@fr)
+AnnotationAssertion(rdfs:label :HORG-FR_000009 "Management unit"@en)
+AnnotationAssertion(rdfs:label :HORG-FR_000009 "Unité de gestion"@fr)
+SubClassOf(:HORG-FR_000009 :HORG-FR_000044)
+SubClassOf(:HORG-FR_000009 ObjectSomeValuesFrom(org:hasUnit :HORG-FR_000011))
+SubClassOf(:HORG-FR_000009 ObjectSomeValuesFrom(org:hasUnit :HORG-FR_000025))
+SubClassOf(:HORG-FR_000009 ObjectExactCardinality(1 org:unitOf :HORG-FR_000005))
+
+# Class: :HORG-FR_000011 (Unité médico-administrative)
+
+AnnotationAssertion(:HORG-FR_000010 :HORG-FR_000011 "MAU"@en)
+AnnotationAssertion(:HORG-FR_000010 :HORG-FR_000011 "UMA"@fr)
+AnnotationAssertion(rdfs:comment :HORG-FR_000011 "Une unité médico-administrative (UMA) est un ensemble individualisé de moyens matériels et humains assurant des soins à des patients, repéré par un code spécifique dans une nomenclature déterminée par l’établissement de santé. Le recueil de l’information médicale est réalisé au niveau des UM, dans le cadre du PMSI. 
+Source : Guide méthodologique de comptabilité analytique hospitalière. Ministère de la Santé. 2011.
+Lien : 
+https://solidarites-sante.gouv.fr/IMG/pdf/GUIDE_CAH___BOS_2011-3.pdf"@fr)
+AnnotationAssertion(rdfs:isDefinedBy :HORG-FR_000011 "Bibliothèque numérique de droit de la santé et d’éthique médicale: https://www.bnds.fr"@fr)
+AnnotationAssertion(rdfs:label :HORG-FR_000011 "Medico-administrative unit"@en)
+AnnotationAssertion(rdfs:label :HORG-FR_000011 "Unité médico-administrative"@fr)
+AnnotationAssertion(owl:versionInfo :HORG-FR_000011 "2019-03-06 : Les UA sont des anciennes entités qui devaient être remplacées par des UMA, mais dans les UA existent encore. UA est équivalent à UMA mais c'est \"deprecated\" comme on dit."@fr)
+SubClassOf(:HORG-FR_000011 :HORG-FR_000044)
+SubClassOf(:HORG-FR_000011 ObjectSomeValuesFrom(org:hasUnit :HORG-FR_000012))
+SubClassOf(:HORG-FR_000011 ObjectExactCardinality(1 :HORG-FR_000028 :HORG-FR_000039))
+SubClassOf(:HORG-FR_000011 ObjectExactCardinality(1 org:unitOf :HORG-FR_000009))
+
+# Class: :HORG-FR_000012 (Unité hospitalière)
+
+AnnotationAssertion(:HORG-FR_000010 :HORG-FR_000012 "HU"@en)
+AnnotationAssertion(:HORG-FR_000010 :HORG-FR_000012 "UH"@fr)
+AnnotationAssertion(rdfs:comment :HORG-FR_000012 "A hospitalization unit is at the lowest level of the structure hierarchy. It corresponds to a healthcare encounter, operting room or hospitalization in the a specific bed."@en)
+AnnotationAssertion(rdfs:comment :HORG-FR_000012 "Une unité d'hospitalisation est \"la plus petite entité de l’établissement à partir de laquelle la collecte des informations (activités et/ou économique) peut être réalisée et utilisée dans les fichiers informatiques\".
+Une unité d'hospitalisation est l’atome versant axe gestionnaire de la structure hospitalière : elle peut correspondre à une UH de consultation lorsque le patient vient consulter un profesionnel de santé, une UH de bloc opératoire lorsque le patient vient se faire opérer ou une UH de d’hospitalisation lorsque le patient est hospitalisé dans un lit.
+
+Source : Guide méthodologique de comptabilité analytique hospitalière. Ministère de la Santé. 2011.
+Lien : 
+https://solidarites-sante.gouv.fr/IMG/pdf/GUIDE_CAH___BOS_2011-3.pdf"@fr)
+AnnotationAssertion(rdfs:label :HORG-FR_000012 "Hospitalization unit"@en)
+AnnotationAssertion(rdfs:label :HORG-FR_000012 "Unité hospitalière"@fr)
+SubClassOf(:HORG-FR_000012 :HORG-FR_000044)
+SubClassOf(:HORG-FR_000012 ObjectExactCardinality(1 org:linkedTo :HORG-FR_000025))
+SubClassOf(:HORG-FR_000012 ObjectExactCardinality(1 org:unitOf :HORG-FR_000011))
+SubClassOf(:HORG-FR_000012 ObjectMaxCardinality(1 org:linkedTo :HORG-FR_000006))
+
+# Class: :HORG-FR_000016 (Unité fonctionnelle)
+
+AnnotationAssertion(:HORG-FR_000010 :HORG-FR_000016 "FU"@en)
+AnnotationAssertion(:HORG-FR_000010 :HORG-FR_000016 "UF"@fr)
+AnnotationAssertion(rdfs:comment :HORG-FR_000016 "A functional unit is a basic structure for the care of patients by a medical or medical-technical team, identified by their functions and their organization. A functional unit is a basic element of services and department."@en)
+AnnotationAssertion(rdfs:comment :HORG-FR_000016 "« Les UF furent créées par le décret du 11 aout 1983 et consacrées par la loi hospitalière du 31 juillet 1991. Selon le décret du 11 aout 1983, les UF sont des structures élémentaires de prise en charge des malades par une équipe soignante ou médico-technique, identifiées par leurs fonctions et leur organisation. Les UF prirent la suite des pôles d'activité qui avaient été instaurés par une loi du 24 juillet 1987. Les UF sont les éléments de base des services ou des départements. Une seule UF peut constituer un service à part entière si elle ne présente aucune complémentarité directe avec d'autres unités de même discipline ou s'il n'existe pas d'unité ayant la même activité. Plusieurs UF de même discipline peuvent constituer un service médical. Trois UF au minimum peuvent constituer un département qui regroupe des UF de même discipline ou de disciplines complémentaires, voire différentes.
+Chaque UF est placée sous la responsabilité d'un PH titulaire ou d'un PHU temporaire du service ou du département dans le cadre de l'organisation générale définie par le chef de service ou de département, et dans le respect du projet de service.
+La nomination du responsable d'UF, pour une période donnée, relève du conseil d'administration après accord du chef de service et avis des praticiens titulaires du service et de la commission médicale d'établissement. »"@fr)
+AnnotationAssertion(rdfs:isDefinedBy :HORG-FR_000016 "Bibliothèque numérique de droit de la santé et d’éthique médicale: https://www.bnds.fr"@fr)
+AnnotationAssertion(rdfs:label :HORG-FR_000016 "Functional unit"@en)
+AnnotationAssertion(rdfs:label :HORG-FR_000016 "Unité fonctionnelle"@fr)
+AnnotationAssertion(rdfs:seeAlso :HORG-FR_000016 "Modèle des Objets de Santé, ASIP Santé : http://mos.asipsante.fr/"@fr)
+SubClassOf(:HORG-FR_000016 :HORG-FR_000044)
+SubClassOf(:HORG-FR_000016 ObjectMinCardinality(0 :HORG-FR_000028 :HORG-FR_000017))
+SubClassOf(:HORG-FR_000016 ObjectExactCardinality(1 org:unitOf :HORG-FR_000005))
+SubClassOf(:HORG-FR_000016 ObjectMaxCardinality(1 org:linkedTo :HORG-FR_000006))
+SubClassOf(:HORG-FR_000016 ObjectMaxCardinality(1 org:linkedTo :HORG-FR_000009))
+
+# Class: :HORG-FR_000017 (Medical speciality)
+
+AnnotationAssertion(rdfs:comment :HORG-FR_000017 "Definition : L'accès aux professions de santé est soumis à des conditions concernant les diplômes obtenus : généralement est requis un diplôme français (DE de médecine, etc. ou européen (dans les professions pour lesquellesil existe des accords de reconnaissance mutuelle des diplômes).
+Source : Modèle des Objets de santé, ASIP, Santé
+Lien : http://mos.asipsante.fr/
+Nomenclature : http://mos.asipsante.fr/NOS/PDF/TRE_R18-DisciplineAutorisation.tabs.pdf
+
+Spécialité et discipline sont synonymes dans les data ?
+https://www.cng.sante.fr/sites/default/files/Testeur%20Plume/Liste_des_disciplines_et_specialites_et_duree_formations.pdf"@fr)
+AnnotationAssertion(rdfs:label :HORG-FR_000017 "Medical speciality"@en)
+AnnotationAssertion(rdfs:label :HORG-FR_000017 "Spécialité médicale"@fr)
+SubClassOf(:HORG-FR_000017 <http://www.w3.org/2004/02/skos/core#Concept>)
+SubClassOf(:HORG-FR_000017 DataExactCardinality(1 :HORG-FR_000000 :MEDICALSPECODE))
+SubClassOf(:HORG-FR_000017 DataExactCardinality(1 :HORG-FR_000001 xsd:string))
+
+# Class: :HORG-FR_000018 (Groupe hospitalier)
+
+AnnotationAssertion(:HORG-FR_000010 :HORG-FR_000018 "GH"@fr)
+AnnotationAssertion(rdfs:label :HORG-FR_000018 "Groupe hospitalier"@fr)
+AnnotationAssertion(rdfs:label :HORG-FR_000018 "Hospital group"@en)
+SubClassOf(:HORG-FR_000018 <http://xmlns.com/foaf/0.1/Group>)
+SubClassOf(:HORG-FR_000018 ObjectSomeValuesFrom(org:hasMember :HORG-FR_000004))
+SubClassOf(:HORG-FR_000018 ObjectExactCardinality(1 :HORG-FR_000042 :HORG-FR_000043))
+
+# Class: :HORG-FR_000019 (Type pole)
+
+AnnotationAssertion(rdfs:comment :HORG-FR_000019 "Definition : Les pôles d’activité clinique et médico-technique peuvent comporter des \"structures internes\" de prise en charge du malade par les équipes médicales, soignantes ou médico-techniques\". Les pôles peuvent être multi-sites.
+Source 1: Modèle des Objets de Santé, ASIP Santé
+Lien de la source 1 : http://mos.asipsante.fr/
+Source 2 :  LOI n° 2009-879 du 21 juillet 2009 portant réforme de l'hôpital et relative aux patients, à la santé et aux territoires (NOR: SASX0822640L)
+Lien de la source 2 :
+https://www.legifrance.gouv.fr/affichTexteArticle.do;jsessionid=5A6DC6640B05BE24F7BFB44CE2326DCC.tplgfr27s_1?idArticle=JORFARTI000020880115&cidTexte=JORFTEXT000020879475&dateTexte=29990101&categorieLien=id"@fr)
+AnnotationAssertion(rdfs:label :HORG-FR_000019 "Pole type"@en)
+AnnotationAssertion(rdfs:label :HORG-FR_000019 "Type pole"@fr)
+SubClassOf(:HORG-FR_000019 :HORG-FR_000003)
+
+# Class: :HORG-FR_000020 (Type service et département)
+
+AnnotationAssertion(rdfs:label :HORG-FR_000020 "Service and departement type"@en)
+AnnotationAssertion(rdfs:label :HORG-FR_000020 "Type service et département"@fr)
+SubClassOf(:HORG-FR_000020 :HORG-FR_000003)
+
+# Class: :HORG-FR_000025 (Administrative unit)
+
+AnnotationAssertion(:HORG-FR_000010 :HORG-FR_000025 "AU"@en)
+AnnotationAssertion(:HORG-FR_000010 :HORG-FR_000025 "UA"@fr)
+AnnotationAssertion(rdfs:label :HORG-FR_000025 "Administrative unit"@en)
+AnnotationAssertion(rdfs:label :HORG-FR_000025 "Unité administrative"@fr)
+AnnotationAssertion(rdfs:seeAlso :HORG-FR_000025 "http://urms1138.eq22/ontologies/horg-fr#HORG-FR_000011")
+AnnotationAssertion(owl:versionInfo :HORG-FR_000025 "2019-03-06 : Les UA sont des anciennes entités qui devaient être remplacées par des UMA, mais dans les UA existent encore. UA est équivalent à UMA mais c'est \"deprecated\"."@fr)
+SubClassOf(:HORG-FR_000025 :HORG-FR_000044)
+SubClassOf(:HORG-FR_000025 ObjectSomeValuesFrom(org:unitOf :HORG-FR_000009))
+SubClassOf(:HORG-FR_000025 ObjectExactCardinality(1 :HORG-FR_000028 :HORG-FR_000039))
+SubClassOf(:HORG-FR_000025 ObjectMaxCardinality(1 org:linkedTo :HORG-FR_000006))
+SubClassOf(:HORG-FR_000025 ObjectMaxCardinality(1 org:linkedTo :HORG-FR_000011))
+
+# Class: :HORG-FR_000026 (Healthcare center identification)
+
+AnnotationAssertion(rdfs:comment :HORG-FR_000026 "An identification of an agent that is a hospital."@en)
+AnnotationAssertion(rdfs:comment :HORG-FR_000026 "Une identification d'un agent qui est un centre médicale (ex. un hopital)."@fr)
+AnnotationAssertion(rdfs:label :HORG-FR_000026 "Healthcare center identification"@en)
+AnnotationAssertion(rdfs:label :HORG-FR_000026 "Identification d'un établisement de santé"@fr)
+SubClassOf(:HORG-FR_000026 :HORG-FR_000043)
+
+# Class: :HORG-FR_000027 (Unit identification)
+
+AnnotationAssertion(rdfs:comment :HORG-FR_000027 "An unit identification is identification of a unit in a specific hospital."@en)
+AnnotationAssertion(rdfs:comment :HORG-FR_000027 "Un identification d'une unité d'un hopital."@fr)
+AnnotationAssertion(rdfs:label :HORG-FR_000027 "Identification d'une unité"@fr)
+AnnotationAssertion(rdfs:label :HORG-FR_000027 "Unit identification"@en)
+SubClassOf(:HORG-FR_000027 :HORG-FR_000043)
+SubClassOf(:HORG-FR_000027 ObjectExactCardinality(1 :HORG-FR_000028 :HORG-FR_000026))
+
+# Class: :HORG-FR_000030 (Type unité fonctionnelle)
+
+AnnotationAssertion(rdfs:label :HORG-FR_000030 "Fonctional unit type"@en)
+AnnotationAssertion(rdfs:label :HORG-FR_000030 "Type unité fonctionnelle"@fr)
+SubClassOf(:HORG-FR_000030 :HORG-FR_000003)
+
+# Class: :HORG-FR_000032 (Management type unit)
+
+AnnotationAssertion(rdfs:label :HORG-FR_000032 "Management type unit"@en)
+AnnotationAssertion(rdfs:label :HORG-FR_000032 "Type unité de gestion"@fr)
+SubClassOf(:HORG-FR_000032 :HORG-FR_000003)
+
+# Class: :HORG-FR_000033 (Type d'activité d'une unité de gestion)
+
+AnnotationAssertion(rdfs:label :HORG-FR_000033 "Management unit activity type"@en)
+AnnotationAssertion(rdfs:label :HORG-FR_000033 "Type d'activité d'une unité de gestion"@fr)
+SubClassOf(:HORG-FR_000033 :HORG-FR_000035)
+
+# Class: :HORG-FR_000034 (Administrative unit activity type)
+
+AnnotationAssertion(rdfs:label :HORG-FR_000034 "Administrative unit activity type"@en)
+AnnotationAssertion(rdfs:label :HORG-FR_000034 "Type d'activité d'une unité administrative"@fr)
+SubClassOf(:HORG-FR_000034 :HORG-FR_000035)
+
+# Class: :HORG-FR_000035 (Activity type)
+
+AnnotationAssertion(rdfs:comment :HORG-FR_000035 "Le type d'activité médicale ou administrative effectué dans une unité."@fr)
+AnnotationAssertion(rdfs:comment :HORG-FR_000035 "The type of medical or administrative activity performed in a unit."@en)
+AnnotationAssertion(rdfs:label :HORG-FR_000035 "Activity type"@en)
+AnnotationAssertion(rdfs:label :HORG-FR_000035 "Type d'activité"@fr)
+SubClassOf(:HORG-FR_000035 <http://www.w3.org/2004/02/skos/core#Concept>)
+SubClassOf(:HORG-FR_000035 DataSomeValuesFrom(:HORG-FR_000001 xsd:string))
+SubClassOf(:HORG-FR_000035 DataExactCardinality(1 :HORG-FR_000000 :ACTIVITYTYPECODE))
+
+# Class: :HORG-FR_000036 (Medico-adminitrative unit type)
+
+AnnotationAssertion(rdfs:label :HORG-FR_000036 "Medico-adminitrative unit type"@en)
+AnnotationAssertion(rdfs:label :HORG-FR_000036 "Type unité medico-administrative"@fr)
+SubClassOf(:HORG-FR_000036 :HORG-FR_000003)
+
+# Class: :HORG-FR_000037 (Medico-administrative unit activity type)
+
+AnnotationAssertion(rdfs:label :HORG-FR_000037 "Medico-administrative unit activity type"@en)
+AnnotationAssertion(rdfs:label :HORG-FR_000037 "Type d'activité d'une unité médico-administrative"@fr)
+SubClassOf(:HORG-FR_000037 :HORG-FR_000035)
+
+# Class: :HORG-FR_000038 (Unité de responsabilité médicale clinique)
+
+AnnotationAssertion(:HORG-FR_000010 :HORG-FR_000038 "CMRU"@en)
+AnnotationAssertion(:HORG-FR_000010 :HORG-FR_000038 "URMC"@fr)
+AnnotationAssertion(rdfs:comment :HORG-FR_000038 "Un unité de responsasilité clinique est une unité médico-administrative de type PMSI."@fr)
+AnnotationAssertion(rdfs:label :HORG-FR_000038 "Clinical medical responsability unit"@en)
+AnnotationAssertion(rdfs:label :HORG-FR_000038 "Unité de responsabilité médicale clinique"@fr)
+SubClassOf(:HORG-FR_000038 :HORG-FR_000011)
+SubClassOf(:HORG-FR_000038 DataExactCardinality(1 :HORG-FR_000000 :PMSI))
+
+# Class: :HORG-FR_000039 (Discipline)
+
+AnnotationAssertion(rdfs:comment :HORG-FR_000039 "Definition : L'accès aux professions de santé est soumis à des conditions concernant les diplômes obtenus : généralement est requis un diplôme français (DE de médecine, etc. ou européen (dans les professions pour lesquellesil existe des accords de reconnaissance mutuelle des diplômes).
+Source : Modèle des Objets de santé, ASIP, Santé
+Lien : http://mos.asipsante.fr/
+Nomenclature : http://mos.asipsante.fr/NOS/PDF/TRE_R18-DisciplineAutorisation.tabs.pdf"@fr)
+AnnotationAssertion(rdfs:label :HORG-FR_000039 "Discipline"@en)
+AnnotationAssertion(rdfs:label :HORG-FR_000039 "Discipline"@fr)
+SubClassOf(:HORG-FR_000039 <http://www.w3.org/2004/02/skos/core#Concept>)
+SubClassOf(:HORG-FR_000039 DataExactCardinality(1 :HORG-FR_000000 :DISCIPLINECODE))
+SubClassOf(:HORG-FR_000039 DataExactCardinality(1 :HORG-FR_000001 xsd:string))
+
+# Class: :HORG-FR_000043 (Identification d'un agent)
+
+AnnotationAssertion(rdfs:comment :HORG-FR_000043 "An agent identification is an entity that describes the identity of an agent.
+An agent is identifiable by an identifier (a code) and a label."@en)
+AnnotationAssertion(rdfs:comment :HORG-FR_000043 "Une identification d'un agent est une entité qui décrit l'identité d'un agent. 
+Un agent est identifiable par un identifiant (un code) et un libellé."@fr)
+AnnotationAssertion(rdfs:label :HORG-FR_000043 "Agent identification"@en)
+AnnotationAssertion(rdfs:label :HORG-FR_000043 "Identification d'un agent"@fr)
+SubClassOf(:HORG-FR_000043 DataExactCardinality(1 :HORG-FR_000001 :AGENTLABEL))
+SubClassOf(:HORG-FR_000043 DataExactCardinality(1 org:identifier :AGENTID))
+
+# Class: :HORG-FR_000044 (Unité d'un hopital)
+
+AnnotationAssertion(rdfs:comment :HORG-FR_000044 "Les secteurs de l'organisation hospitalière qui ne sont pas considérés comme des départements offrant des soins spécialisés aux patients. Ils comprennent divers services hospitaliers spécialisés."@fr)
+AnnotationAssertion(rdfs:comment :HORG-FR_000044 "Those areas of the hospital organization not considered departments which provide specialized patient care. They include various hospital special care wards."@en)
+AnnotationAssertion(rdfs:isDefinedBy :HORG-FR_000044 "https://meshb-prev.nlm.nih.gov/record/ui?ui=D006757"@fr)
+AnnotationAssertion(rdfs:label :HORG-FR_000044 "Hospital unit"@en)
+AnnotationAssertion(rdfs:label :HORG-FR_000044 "Unité d'un hopital"@fr)
+SubClassOf(:HORG-FR_000044 org:OrganizationalUnit)
+
+# Class: :HORG-FR_000045 (Chief of service)
+
+AnnotationAssertion(rdfs:comment :HORG-FR_000045 "\"Le chef de service hospitalier est un médecin ou un pharmacien chargé de la coordination d'un service.\""@fr)
+AnnotationAssertion(rdfs:comment :HORG-FR_000045 "The head of the hospital service is a doctor or a pharmacist responsible for the coordination of a hospital service."@en)
+AnnotationAssertion(rdfs:isDefinedBy :HORG-FR_000045 "https://fr.wikipedia.org/wiki/Chef_de_service_hospitalier"@fr)
+AnnotationAssertion(rdfs:label :HORG-FR_000045 "Chef de service"@fr)
+AnnotationAssertion(rdfs:label :HORG-FR_000045 "Chief of service"@en)
+SubClassOf(:HORG-FR_000045 org:Post)
+SubClassOf(:HORG-FR_000045 ObjectSomeValuesFrom(org:postIn :HORG-FR_000006))
+
+# Class: :HORG-FR_000046 (Praticien hospitalier titulaire)
+
+AnnotationAssertion(rdfs:comment :HORG-FR_000046 "\"En France, un praticien hospitalier (PH) est un médecin, chirurgien, pharmacien, ou chirurgien-dentiste exerçant au sein d'un établissement public de santé ou d'un établissement d'hébergement pour personnes âgées dépendantes (EHPAD). Au sens strict, ont seuls le titre de praticien hospitalier ceux qui, recrutés à l'issue d'un concours national annuel, sont nommés à titre permanent dans les hôpitaux publics français. Il existe aussi des praticiens des hôpitaux à temps partiel, eux aussi nommés à titre permanent, ainsi que des praticiens nommés à titre temporaire sous différentes appellations.\""@fr)
+AnnotationAssertion(rdfs:comment :HORG-FR_000046 "In France, a hospital practitioner (PH) is a doctor, surgeon, pharmacist, or dentist practicing in a public health institution or a residential care facility for dependent elderly people (EHPAD). In the strict sense, only those who, recruited at the end of an annual national competition, are permanently appointed to French public hospitals, have the title of hospital practitioner. There are also practitioners in part-time hospitals, who are also appointed on a permanent basis, as well as practitioners appointed on a temporary basis under different names."@en)
+AnnotationAssertion(rdfs:isDefinedBy :HORG-FR_000046 "https://fr.wikipedia.org/wiki/Praticien_hospitalier"@fr)
+AnnotationAssertion(rdfs:label :HORG-FR_000046 "Hospital practitioner"@en)
+AnnotationAssertion(rdfs:label :HORG-FR_000046 "Praticien hospitalier titulaire"@fr)
+SubClassOf(:HORG-FR_000046 org:Post)
+
+# Class: :HORG-FR_000047 (Praticien hospitalier universitaire)
+
+AnnotationAssertion(rdfs:comment :HORG-FR_000047 "\"Les praticiens hospitalier universitaire (PHU) sont des PH détachés en cette qualité pour exercer des fonctions universitaires pendant un maximum de six ans. Seuls les candidats reçus au concours de type I peuvent être détachés en qualité de PHU si leur classement le permet.\""@fr)
+AnnotationAssertion(rdfs:comment :HORG-FR_000047 "University hospital practitioners are seconded in this capacity to hold academic positions for up to six years. Only candidates who have been awarded the Type I competition may be seconded as PHUs if their ranking permits."@en)
+AnnotationAssertion(rdfs:isDefinedBy :HORG-FR_000047 "https://www.bnds.fr/dictionnaire/phu.html"@fr)
+AnnotationAssertion(rdfs:label :HORG-FR_000047 "Praticien hospitalier universitaire"@fr)
+AnnotationAssertion(rdfs:label :HORG-FR_000047 "University Hospital Practitioner"@en)
+SubClassOf(:HORG-FR_000047 org:Post)
+
+# Class: :HORG-FR_000048 (Chief of healthcare division)
+
+AnnotationAssertion(rdfs:comment :HORG-FR_000048 "Le chef de pôle  est un médecin ou un pharmacien chargé de la coordination d'un pôle."@fr)
+AnnotationAssertion(rdfs:comment :HORG-FR_000048 "The chief of a healthcare division is a doctor or a pharmacist responsible for the coordination of a healthcare division."@en)
+AnnotationAssertion(rdfs:label :HORG-FR_000048 "Chef de pôle"@fr)
+AnnotationAssertion(rdfs:label :HORG-FR_000048 "Chief of healthcare division"@en)
+SubClassOf(:HORG-FR_000048 org:Post)
+SubClassOf(:HORG-FR_000048 ObjectSomeValuesFrom(org:postIn :HORG-FR_000005))
+
+# Class: org:OrganizationalUnit (Unité organisationnelle)
+
+AnnotationAssertion(rdfs:label org:OrganizationalUnit "Unité organisationnelle"@fr)
+SubClassOf(org:OrganizationalUnit ObjectExactCardinality(1 :HORG-FR_000042 :HORG-FR_000027))
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: :Dr.Dupont (:Dr.Dupont)
+
+ClassAssertion(<http://xmlns.com/foaf/0.1/Person> :Dr.Dupont)
+ObjectPropertyAssertion(org:memberOf :Dr.Dupont :uh_ophtalmologie)
+
+# Individual: :Dr.Legrand (:Dr.Legrand)
+
+ClassAssertion(<http://xmlns.com/foaf/0.1/Person> :Dr.Legrand)
+
+# Individual: :ua_ophtalmologie (:ua_ophtalmologie)
+
+ClassAssertion(:HORG-FR_000025 :ua_ophtalmologie)
+
+# Individual: :uh_ophtalmologie (:uh_ophtalmologie)
+
+ObjectPropertyAssertion(org:linkedTo :uh_ophtalmologie :ua_ophtalmologie)
+ObjectPropertyAssertion(org:unitOf :uh_ophtalmologie :uma_ophtalmologie)
+
+# Individual: :uma_ophtalmologie (:uma_ophtalmologie)
+
+ClassAssertion(:HORG-FR_000011 :uma_ophtalmologie)
+ObjectPropertyAssertion(org:hasUnit :uma_ophtalmologie :uh_ophtalmologie)
+
+
+)

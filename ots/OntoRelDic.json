@@ -1,0 +1,366 @@
+{
+  "Classes": [
+    {
+      "iri": "HORG-FR_000009",
+      "label": "Management unit",
+      "ntTable": "T0001",
+      "vxeTable": "H0034",
+      "vbeTable": "H0035",
+      "vbxTable": "H0036"
+    },
+    {
+      "iri": "OrganizationalUnit",
+      "label": "OrganizationalUnit",
+      "ntTable": "T0002",
+      "vxeTable": "H0037",
+      "vbeTable": "H0038",
+      "vbxTable": "H0039"
+    },
+    {
+      "iri": "HORG-FR_000012",
+      "label": "Hospitalization unit",
+      "ntTable": "T0003",
+      "vxeTable": "H003a",
+      "vbeTable": "H003b",
+      "vbxTable": "H003c"
+    },
+    {
+      "iri": "HORG-FR_000025",
+      "label": "Administrative unit",
+      "ntTable": "T0004",
+      "vxeTable": "H003d",
+      "vbeTable": "H003e",
+      "vbxTable": "H003f"
+    },
+    {
+      "iri": "HORG-FR_000026",
+      "label": "Healthcare center identification",
+      "ntTable": "T0005",
+      "vxeTable": "H0040",
+      "vbeTable": "H0041",
+      "vbxTable": "H0042"
+    },
+    {
+      "iri": "HORG-FR_000004",
+      "label": "Hospital",
+      "ntTable": "T0006",
+      "vxeTable": "H0043",
+      "vbeTable": "H0044",
+      "vbxTable": "H0045"
+    },
+    {
+      "iri": "HORG-FR_000027",
+      "label": "Unit identification",
+      "ntTable": "T0007",
+      "vxeTable": "H0046",
+      "vbeTable": "H0047",
+      "vbxTable": "H0048"
+    },
+    {
+      "iri": "HORG-FR_000005",
+      "label": "Healthcare division",
+      "ntTable": "T0008",
+      "vxeTable": "H0049",
+      "vbeTable": "H004a",
+      "vbxTable": "H004b"
+    },
+    {
+      "iri": "HORG-FR_000038",
+      "label": "Clinical medical responsability unit",
+      "ntTable": "T0009",
+      "vxeTable": "H004c",
+      "vbeTable": "H004d",
+      "vbxTable": "H004e"
+    },
+    {
+      "iri": "HORG-FR_000016",
+      "label": "Functional unit",
+      "ntTable": "T000a",
+      "vxeTable": "H004f",
+      "vbeTable": "H0050",
+      "vbxTable": "H0051"
+    },
+    {
+      "iri": "HORG-FR_000006",
+      "label": "Service and department",
+      "ntTable": "T000b",
+      "vxeTable": "H0052",
+      "vbeTable": "H0053",
+      "vbxTable": "H0054"
+    },
+    {
+      "iri": "HORG-FR_000017",
+      "label": "Medical speciality",
+      "ntTable": "T000c",
+      "vxeTable": "H0055",
+      "vbeTable": "H0056",
+      "vbxTable": "H0057"
+    },
+    {
+      "iri": "HORG-FR_000039",
+      "label": "Discipline",
+      "ntTable": "T000d",
+      "vxeTable": "H0058",
+      "vbeTable": "H0059",
+      "vbxTable": "H005a"
+    },
+    {
+      "iri": "HORG-FR_000018",
+      "label": "Hospital group",
+      "ntTable": "T000e",
+      "vxeTable": "H005b",
+      "vbeTable": "H005c",
+      "vbxTable": "H005d"
+    },
+    {
+      "iri": "HORG-FR_000043",
+      "label": "Agent identification",
+      "ntTable": "T000f",
+      "vxeTable": "H005e",
+      "vbeTable": "H005f",
+      "vbxTable": "H0060"
+    },
+    {
+      "iri": "HORG-FR_000011",
+      "label": "Medico-administrative unit",
+      "ntTable": "T0010",
+      "vxeTable": "H0061",
+      "vbeTable": "H0062",
+      "vbxTable": "H0063"
+    }
+  ],
+  "ClassAxioms": [
+    {
+      "expression": "HORG-FR_000017_HORG-FR_000001_string",
+      "label": "Medical speciality has label string",
+      "ntTable": "T0012",
+      "vxeTable": "H0064",
+      "vbeTable": "H0065",
+      "vbxTable": "H0066"
+    },
+    {
+      "expression": "HORG-FR_000043_identifier_AGENTID",
+      "label": "Agent identification identifier Agent identifier",
+      "ntTable": "T0014",
+      "vxeTable": "H0067",
+      "vbeTable": "H0068",
+      "vbxTable": "H0069"
+    },
+    {
+      "expression": "HORG-FR_000039_HORG-FR_000000_DISCIPLINECODE",
+      "label": "Discipline has code Code de discipline médicale",
+      "ntTable": "T0016",
+      "vxeTable": "H006a",
+      "vbeTable": "H006b",
+      "vbxTable": "H006c"
+    },
+    {
+      "expression": "HORG-FR_000043_HORG-FR_000001_AGENTLABEL",
+      "label": "Agent identification has label Agent label",
+      "ntTable": "T0018",
+      "vxeTable": "H006d",
+      "vbeTable": "H006e",
+      "vbxTable": "H006f"
+    },
+    {
+      "expression": "HORG-FR_000039_HORG-FR_000001_string",
+      "label": "Discipline has label string",
+      "ntTable": "T0019",
+      "vxeTable": "H0070",
+      "vbeTable": "H0071",
+      "vbxTable": "H0072"
+    },
+    {
+      "expression": "HORG-FR_000038_HORG-FR_000000_PMSI",
+      "label": "Clinical medical responsability unit has code PMSI field",
+      "ntTable": "T001b",
+      "vxeTable": "H0073",
+      "vbeTable": "H0074",
+      "vbxTable": "H0075"
+    },
+    {
+      "expression": "HORG-FR_000017_HORG-FR_000000_MEDICALSPECODE",
+      "label": "Medical speciality has code Medical speciality code",
+      "ntTable": "T001d",
+      "vxeTable": "H0076",
+      "vbeTable": "H0077",
+      "vbxTable": "H0078"
+    },
+    {
+      "expression": "HORG-FR_000009_unitOf_HORG-FR_000005",
+      "label": "Management unit unitOf Healthcare division",
+      "ntTable": "T001e",
+      "vxeTable": "H0079",
+      "vbeTable": "H007a",
+      "vbxTable": "H007b"
+    },
+    {
+      "expression": "OrganizationalUnit_HORG-FR_000042_HORG-FR_000027",
+      "label": "OrganizationalUnit has identifier Unit identification",
+      "ntTable": "T001f",
+      "vxeTable": "H007c",
+      "vbeTable": "H007d",
+      "vbxTable": "H007e"
+    },
+    {
+      "expression": "HORG-FR_000012_linkedTo_HORG-FR_000006",
+      "label": "Hospitalization unit linkedTo Service and department",
+      "ntTable": "T0020",
+      "vxeTable": "H007f",
+      "vbeTable": "H0080",
+      "vbxTable": "H0081"
+    },
+    {
+      "expression": "HORG-FR_000012_unitOf_HORG-FR_000011",
+      "label": "Hospitalization unit unitOf Medico-administrative unit",
+      "ntTable": "T0021",
+      "vxeTable": "H0082",
+      "vbeTable": "H0083",
+      "vbxTable": "H0084"
+    },
+    {
+      "expression": "HORG-FR_000012_linkedTo_HORG-FR_000025",
+      "label": "Hospitalization unit linkedTo Administrative unit",
+      "ntTable": "T0022",
+      "vxeTable": "H0085",
+      "vbeTable": "H0086",
+      "vbxTable": "H0087"
+    },
+    {
+      "expression": "HORG-FR_000025_linkedTo_HORG-FR_000006",
+      "label": "Administrative unit linkedTo Service and department",
+      "ntTable": "T0023",
+      "vxeTable": "H0088",
+      "vbeTable": "H0089",
+      "vbxTable": "H008a"
+    },
+    {
+      "expression": "HORG-FR_000025_unitOf_HORG-FR_000009",
+      "label": "Administrative unit unitOf Management unit",
+      "ntTable": "T0024",
+      "vxeTable": "H008b",
+      "vbeTable": "H008c",
+      "vbxTable": "H008d"
+    },
+    {
+      "expression": "HORG-FR_000025_HORG-FR_000028_HORG-FR_000039",
+      "label": "Administrative unit has specified value Discipline",
+      "ntTable": "T0025",
+      "vxeTable": "H008e",
+      "vbeTable": "H008f",
+      "vbxTable": "H0090"
+    },
+    {
+      "expression": "HORG-FR_000025_linkedTo_HORG-FR_000011",
+      "label": "Administrative unit linkedTo Medico-administrative unit",
+      "ntTable": "T0026",
+      "vxeTable": "H0091",
+      "vbeTable": "H0092",
+      "vbxTable": "H0093"
+    },
+    {
+      "expression": "HORG-FR_000004_HORG-FR_000042_HORG-FR_000026",
+      "label": "Hospital has identifier Healthcare center identification",
+      "ntTable": "T0027",
+      "vxeTable": "H0094",
+      "vbeTable": "H0095",
+      "vbxTable": "H0096"
+    },
+    {
+      "expression": "HORG-FR_000027_HORG-FR_000028_HORG-FR_000026",
+      "label": "Unit identification has specified value Healthcare center identification",
+      "ntTable": "T0028",
+      "vxeTable": "H0097",
+      "vbeTable": "H0098",
+      "vbxTable": "H0099"
+    },
+    {
+      "expression": "HORG-FR_000005_unitOf_HORG-FR_000004",
+      "label": "Healthcare division unitOf Hospital",
+      "ntTable": "T0029",
+      "vxeTable": "H009a",
+      "vbeTable": "H009b",
+      "vbxTable": "H009c"
+    },
+    {
+      "expression": "HORG-FR_000038_HORG-FR_000028_HORG-FR_000039",
+      "label": "Clinical medical responsability unit has specified value Discipline",
+      "ntTable": "T002a",
+      "vxeTable": "H009d",
+      "vbeTable": "H009e",
+      "vbxTable": "H009f"
+    },
+    {
+      "expression": "HORG-FR_000038_unitOf_HORG-FR_000011",
+      "label": "Clinical medical responsability unit unitOf Medico-administrative unit",
+      "ntTable": "T002b",
+      "vxeTable": "H00a0",
+      "vbeTable": "H00a1",
+      "vbxTable": "H00a2"
+    },
+    {
+      "expression": "HORG-FR_000016_HORG-FR_000028_HORG-FR_000017",
+      "label": "Functional unit has specified value Medical speciality",
+      "ntTable": "T002c",
+      "vxeTable": "H00a3",
+      "vbeTable": "H00a4",
+      "vbxTable": "H00a5"
+    },
+    {
+      "expression": "HORG-FR_000016_unitOf_HORG-FR_000005",
+      "label": "Functional unit unitOf Healthcare division",
+      "ntTable": "T002d",
+      "vxeTable": "H00a6",
+      "vbeTable": "H00a7",
+      "vbxTable": "H00a8"
+    },
+    {
+      "expression": "HORG-FR_000016_linkedTo_HORG-FR_000006",
+      "label": "Functional unit linkedTo Service and department",
+      "ntTable": "T002e",
+      "vxeTable": "H00a9",
+      "vbeTable": "H00aa",
+      "vbxTable": "H00ab"
+    },
+    {
+      "expression": "HORG-FR_000016_linkedTo_HORG-FR_000009",
+      "label": "Functional unit linkedTo Management unit",
+      "ntTable": "T002f",
+      "vxeTable": "H00ac",
+      "vbeTable": "H00ad",
+      "vbxTable": "H00ae"
+    },
+    {
+      "expression": "HORG-FR_000006_unitOf_HORG-FR_000004",
+      "label": "Service and department unitOf Hospital",
+      "ntTable": "T0030",
+      "vxeTable": "H00af",
+      "vbeTable": "H00b0",
+      "vbxTable": "H00b1"
+    },
+    {
+      "expression": "HORG-FR_000006_linkedTo_HORG-FR_000005",
+      "label": "Service and department linkedTo Healthcare division",
+      "ntTable": "T0031",
+      "vxeTable": "H00b2",
+      "vbeTable": "H00b3",
+      "vbxTable": "H00b4"
+    },
+    {
+      "expression": "HORG-FR_000018_HORG-FR_000042_HORG-FR_000043",
+      "label": "Hospital group has identifier Agent identification",
+      "ntTable": "T0032",
+      "vxeTable": "H00b5",
+      "vbeTable": "H00b6",
+      "vbxTable": "H00b7"
+    },
+    {
+      "expression": "HORG-FR_000011_unitOf_HORG-FR_000009",
+      "label": "Medico-administrative unit unitOf Management unit",
+      "ntTable": "T0033",
+      "vxeTable": "H00b8",
+      "vbeTable": "H00b9",
+      "vbxTable": "H00ba"
+    }
+  ]
+}
