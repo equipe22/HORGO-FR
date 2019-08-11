@@ -39,4 +39,4 @@ If needed use ots/clean.sh or mapping/clean.sh to drop database elements
 * Ministère du travail, de l’emploi et de la santé. Guide méthodologique de comptabilité analytique hospitalière: https://solidarites-sante.gouv.fr/IMG/pdf/GUIDE_CAH___BOS_2011-3.pdf
 
 # License
-...
+[![License: CC BY-NC-SA 4.0](https://licensebuttons.net/l/by-nc-sa/4.0/80x15.png)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
