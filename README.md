@@ -31,7 +31,7 @@ If needed use ots/clean.sh or mapping/clean.sh to drop database elements
 
 # Authors
 * Christina Khnaisser: Christina.Khnaisser@etu.parisdescartes.fr <br>
-* Vincent Looten: Vincent.Looten@aphp.fr
+* Vincent Looten: lootenv@gmail.com
 
 # Links
 * The Organization Ontology: https://www.w3.org/TR/vocab-org/
